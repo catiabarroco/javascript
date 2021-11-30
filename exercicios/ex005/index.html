@@ -17,34 +17,38 @@
     <h1>Primeiros estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar <strong>DOM</strong> em JavaSript</p>
-    <div id ="msg">Clique em mim</div>
+    <div id = "msg">Clique em mim</div>
 
     <script>
         /*window.document.write('Olá Mundo!')
         window.document.write(window.document.charset)
         window.document.write(window.navigator.appName)
-        window.document.write(window.document.URL)*/
+        window.document.write(window.document.URL)
 
         var corpo = window.document.body
-        corpo.style.background ='black'
+        corpo.style.background ='black'*/
 
+        
+/*
         var p1 = window.document.getElementsByTagName('p')[1]
         window.document.write('Está escrito assim: ' + p1.innerText) //pega o texto sem formatação
         window.document.write('Está escrito assim: ' + p1.innerHTML) // pega tudo com as formatações
-        p1.style.color = 'blue'
+        p1.style.color = 'blue' */
 
-        /* POR ID
+        /*        //POR ID
         var d = window.document.getElementById('msg')
         d.style.background = 'green'
         d.innerText = 'Estou aguardando'
-        //window.document.getElementById('msg').innerText = 'Olá' //funciona igual, mas é mto comprido o comando
-        */
-       /* POR NOME
+        //window.document.getElementById('msg').innerText = 'Olá' //funciona igual, mas é mto comprido o comando*/
+        
+        /*       //POR NOME
         var d = window.document.getElementsByName('msg')[0]
+        d.style.background = 'green'
         d.innerText = 'OLá' */
 
         var d  = window.document.querySelector('div#msg')
         /*# id ; . class */
+
         d.style.background ='blue'
 
 
