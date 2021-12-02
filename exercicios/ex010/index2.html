@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: rgba(137, 43, 226, 0.555);
+            color: rgb(46, 44, 44);
+        }
+        main {
+            background-color: white;
+            width: 500px;
+            height: 200px;
+            border-radius: 20px;
+            text-align: center;
+            margin: auto;
+            padding: 5px;
+            box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.466);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>És estrangueiro?</h1>
+        <p>Onde nasceste?</p>
+        <input type="text" name="txtnat" id="txtnat">
+        <input type="button" value="Verificar" onclick="calcular()">
+        <div id= 'nat'></div>
+    </main>
+    <script>
+        function calcular() {
+            var nacionalidade = (document.querySelector('input#txtnat')).value
+            var res = document.getElementById('nat')
+          
+
+            if (nacionalidade == 'Portugal') {
+                res.innerHTML = 'Português'
+            }else{
+                res.innerHTML = 'Estrangueiro'
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
