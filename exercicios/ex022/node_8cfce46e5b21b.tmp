@@ -1,0 +1,7 @@
+//function fatorial(n) {
+var res = ''    
+for(var c = 5 ; c>=1; c=c-1)
+    c *=c
+    console.log(c)
+    
+//}120
