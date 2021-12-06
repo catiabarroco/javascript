@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula Bhaskara</title>
+    <style>
+        button{
+            margin-bottom: 10px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <button onclick="calcular()">Reajuste de Salário</button>
+    <section id ='res'>Considerando a equação no formato <strong>ax<sup>2</sup> + bx + c = 0</strong>,aperte o botão acima para calcular o valor de &Delta;. </section>
+    <script>
+        function calcular(){
+            var a = Number(window.prompt('Qual o valor de a?'))
+            var b = Number(window.prompt(`Qual o valor de b?`))
+            var c = Number(window.prompt(`Qual o valor de c?`))
+
+            var dellta = (b**2)-4*a*c
+
+            res.innerHTML = `<strong>Resolvendo Bhaskara</strong><br>`
+            res.innerHTML += `A equação atual é <strong>${a}x<sup>2</sup> + ${b}x + ${c} = 0</strong><br>`
+            res.innerHTML += `O cálculo realizado será <strong>&Delta; = ${b}<sup>2</sup>-4*${a}*${c}</strong> <br>`
+            res.innerHTML += `O valor calculado foi <mark><strong>&Delta; = ${dellta}</strong></mark>` 
+        }
+    </script>
+</body>
+</html>

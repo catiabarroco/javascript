@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+    <style>
+        button{
+            width: 100px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button onclick="converter()">Converter</button><br>
+    <section id='res'>Clique no botão acima para iniciar</section>
+    <script>
+        function converter(){
+            var distancia = window.prompt('Digite a distancia em (m)')
+            var res = window.document.getElementById('res')
+
+            res.innerHTML = `<strong>A distancia de ${distancia} metros corresponde a... </strong> <br>`
+            res.innerHTML += `${(distancia/1000).toFixed(2).replace('.', ',')} quilometros (km)<br>`
+            res.innerHTML += `${(distancia/100).toFixed(2).replace('.', ',')} quilometros (Hm)<br>`
+            res.innerHTML += `${(distancia/10).toFixed(2).replace('.', ',')} quilometros (Dam)<br>`
+            res.innerHTML += `${(distancia*10).toFixed(2).replace('.', ',')} quilometros (dm)<br>`
+            res.innerHTML += `${(distancia*100).toFixed(2).replace('.', ',')} quilometros (cm)<br>`
+            res.innerHTML += `${(distancia*1000).toFixed(2).replace('.', ',')} quilometros (mm)`
+        }
+    </script>
+</body>
+</html>

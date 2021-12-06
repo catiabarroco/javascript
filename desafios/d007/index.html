@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+</head>
+<body>
+    <h1>Conversor Euro€-US$</h1>
+    <button onclick="converter()">Converter</button>
+    <section id='res'>Clique no botão acima para inciar</section>
+
+    <script>
+        function converter() {
+            var euro = window.prompt('QUantos Euros quer converter?')
+            var res = window.document.getElementById('res')
+            res.innerHTML = `${euro} € = ${Number(euro)*1.13} $US`
+        }
+    </script>
+</body>
+</html>

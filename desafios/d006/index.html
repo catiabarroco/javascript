@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <style>
+        button{
+            height: 50px;
+            width: 100px;
+            margin: 5px;
+        }
+        section{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperatura</h1>
+    <button onclick="converter()">Converter</button>
+    <section id='res'>Clique no botão acima para inciar</section>
+    <script>
+        function converter() {
+            var temp = window.prompt('Digite uma temperatura em ºC(Celsius)')
+            var res = window.document.getElementById('res')
+            res.innerHTML = `<strong>A temperatura de ${temp}ºC, corresponde a...</strong><br>`
+            var kel = (Number(temp)+273.15).toFixed(2)
+            var fah = (Number(temp)* 1.8 + 32).toFixed(2)
+
+            res.innerHTML += `${kel}(kelvin)<br>`
+            res.innerHTML += `${fah}(fahrenheit)`
+        }
+    </script>
+</body>
+</html>

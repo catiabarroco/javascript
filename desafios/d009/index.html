@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajustar Salário</title>
+    <style>
+        button{
+            margin-bottom: 10px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste Salarial</h1>
+    <button onclick="calcular()">Reajuste de Salário</button>
+    <section id ='res'>Clique no botão acima para inciar</section>
+    <script>
+        function calcular(){
+            var nome = window.prompt('Qual o o nome do funcionario?')
+            var salario = Number(window.prompt(`Qual o salário do ${nome}`))
+            var aumento = (Number(window.prompt(`O salario do ${nome} vai ser rejustado em qual percentagem?`)))/100
+            var res = window.document.getElementById('res')
+
+            res.innerHTML = `<strong>${nome} recebeu um aumento salarial</strong><br>`
+            res.innerHTML += `O salário atual é de ${salario}€ <br>`
+            res.innerHTML += `Com um aumento de ${aumento}%, o salario vai aumentar ${(salario*aumento).toFixed(2)} no proximo mês<br>`
+            res.innerHTML += `E a partir daí, ${nome} vai passar a ganhar ${(salario+(salario*aumento)).toFixed(2)}€`
+        }
+    </script>
+</body>
+</html>
